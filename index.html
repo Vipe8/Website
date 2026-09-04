@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Game Designer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- ============ SIDEBAR / PLAYER CARD ============ -->
+<aside class="sidebar" id="sidebar">
+
+  <div class="player-card">
+    <div class="avatar-ring">
+      <div class="avatar-slot">
+        <!-- Replace with <img src="images/avatar.jpg" alt="Your name"> -->
+        <span class="avatar-placeholder">🎮</span>
+      </div>
+      <span class="avatar-badge">P1</span>
+    </div>
+
+    <h1 class="player-name">Your Name</h1>
+    <p class="player-class">Game Designer</p>
+
+    <div class="stat-line">
+      <span class="stat-label">LVL</span>
+      <span class="stat-value">∞</span>
+      <span class="stat-bar" aria-hidden="true"><span class="stat-fill"></span></span>
+    </div>
+  </div>
+
+  <nav class="level-select" aria-label="Section navigation">
+    <ul class="nav-flat">
+      <li><a href="#summary" class="nav-link" data-section="summary"><span class="nav-cursor">▶</span>Summary</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience"><span class="nav-cursor">▶</span>Experience</a></li>
+      <li><a href="#jams" class="nav-link" data-section="jams"><span class="nav-cursor">▶</span>Jams</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-cursor">▶</span>Other Projects</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills"><span class="nav-cursor">▶</span>Skills</a></li>
+      <li><a href="#education" class="nav-link" data-section="education"><span class="nav-cursor">▶</span>Education</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="controller-row" aria-label="Contact links">
+      <a href="mailto:you@example.com" class="pad-btn" title="Email" aria-label="Email">✉</a>
+      <!-- Replace with your real Discord invite or username link -->
+      <a href="https://discord.com/users/yourid" class="pad-btn" title="Discord" aria-label="Discord" target="_blank" rel="noopener">💬</a>
+      <a href="https://linkedin.com/in/yourname" class="pad-btn" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <!-- Replace with a link to your actual CV/resume file -->
+      <a href="cv.pdf" class="pad-btn" title="CV" aria-label="Download CV" target="_blank" rel="noopener">CV</a>
+    </div>
+    <p class="footer-note">© <span id="year"></span> Your Name — Press Start</p>
+  </div>
+
+</aside>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main class="content">
+
+  <!-- SUMMARY -->
+  <section id="summary" class="panel about-panel">
+    <div class="summary-banner">
+      <!-- Replace with <img src="images/summary-banner.gif" alt="..."> -->
+      <span class="summary-banner-label">Banner GIF — 3:1</span>
+    </div>
+    <p class="eyebrow">Snapshot</p>
+    <h2 class="panel-title">Summary</h2>
+    <p class="about-text">
+      I'm a game designer who designs feelings. I've worked on <em>Penny for
+      Your Potion</em>, participated in 5 game jams, and am currently working
+      on <em>Please, Spin</em> as a game designer. I tend to focus on the
+      experience while designing systems and progression. I'm also trying
+      out other aspects of game development — especially programming and
+      sound &amp; music design — to improve my design capabilities.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="panel experience-panel">
+    <p class="eyebrow">Save File</p>
+    <h2 class="panel-title">Experience</h2>
+
+    <!-- Studio entry -->
+    <div class="employer-block" style="--tint:#FF5D73;">
+      <div class="employer-head">
+        <div class="employer-logo notched"><!-- Replace with <img src="images/studio-logo.png"> --><span>🏢</span></div>
+        <div class="employer-heading">
+          <h3>Last Minute Studios</h3>
+          <p class="employer-role">Game Designer</p>
+          <p class="employer-meta">April 2025 — Present · Remote</p>
+        </div>
+      </div>
+
+      <div class="sub-list">
+        <div class="sub-item">
+          <div class="project-detail-grid">
+            <div class="project-detail-text">
+              <h4>Please, Spin</h4>
+              <div class="project-meta-grid">
+                <div><span>Genre</span> Roguelike Deckbuilder, Psychological Horror</div>
+                <div><span>Engine</span> Unity</div>
+                <div><span>Release</span> Q4 2026</div>
+                <div><span>Platforms</span> Windows PC &amp; Linux</div>
+                <div><span>Team</span> 2 Developers</div>
+              </div>
+              <p>Score-based roguelike where your life hangs on the spin of a wheel. Customize your wheel, discover rule-breaking items, and escape the show.</p>
+              <p class="sub-item-label">My Role</p>
+              <ul class="role-bullets">
+                <li>Designed core gameplay loops and systems.</li>
+                <li>Balanced the game economy and progression pacing for different scenarios using gameplay data.</li>
+                <li>Designed and implemented in-engine content, modifiers, and prefabs.</li>
+                <li>Collaborated on level design, scene composition, and environmental set dressing.</li>
+                <li>Developed visual reference boards and initial concept sketches for 3D assets, VFX, and animations.</li>
+                <li>Directed sound design and produced SFX, music tracks, and promotional audio.</li>
+                <li>Collaborated on product publishing, marketing, and community management.</li>
+              </ul>
+              <div class="sub-item-links">
+                <!-- Replace # with your real URLs -->
+                <a href="#" class="link-chip" target="_blank" rel="noopener">Steam Page ↗</a>
+                <a href="#" class="link-chip" target="_blank" rel="noopener">Official Website ↗</a>
+              </div>
+            </div>
+            <div class="project-detail-media">
+              <div class="slide-gallery">
+                <div class="slide-track">
+                  <!-- Replace each with <img src="images/..."> -->
+                  <div class="slide"><span>GIF</span></div>
+                  <div class="slide"><span>PNG</span></div>
+                  <div class="slide"><span>PNG</span></div>
+                </div>
+                <button class="slide-nav slide-prev" aria-label="Previous slide">‹</button>
+                <button class="slide-nav slide-next" aria-label="Next slide">›</button>
+                <div class="slide-dots"></div>
+              </div>
+              <div class="video-embed">
+                <!-- Replace with: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Please, Spin Trailer" allowfullscreen></iframe> -->
+                <span class="video-embed-label">▶ Announcement Trailer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-item">
+          <div class="project-detail-grid">
+            <div class="project-detail-text">
+              <h4>Penny For Your Potion</h4>
+              <div class="project-meta-grid">
+                <div><span>Genre</span> Simulation, Management</div>
+                <div><span>Engine</span> Unity</div>
+                <div><span>Release</span> December 2025</div>
+                <div><span>Platforms</span> Windows PC &amp; Linux</div>
+                <div><span>Team</span> 4 Developers</div>
+              </div>
+              <p>A cozy shop management game where you play as an alchemist. Focuses on building, customization, and progression.</p>
+              <p class="sub-item-label">My Role</p>
+              <ul class="role-bullets">
+                <li>Established core design pillars and gameplay mechanics.</li>
+                <li>Balanced the game economy and progression pacing.</li>
+                <li>Authored and implemented in-engine assets.</li>
+                <li>Designed UI layouts and screen flow.</li>
+                <li>Developed visual reference boards and initial concept sketches for 3D assets.</li>
+                <li>Directed sound design.</li>
+              </ul>
+            </div>
+            <div class="project-detail-media">
+              <div class="slide-gallery">
+                <div class="slide-track">
+                  <div class="slide"><span>GIF</span></div>
+                  <div class="slide"><span>PNG</span></div>
+                  <div class="slide"><span>PNG</span></div>
+                </div>
+                <button class="slide-nav slide-prev" aria-label="Previous slide">‹</button>
+                <button class="slide-nav slide-next" aria-label="Next slide">›</button>
+                <div class="slide-dots"></div>
+              </div>
+              <div class="video-embed">
+                <!-- Replace with: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Penny For Your Potion Trailer" allowfullscreen></iframe> -->
+                <span class="video-embed-label">▶ Trailer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- University club entry -->
+    <div class="employer-block" style="--tint:#7B61FF;">
+      <div class="employer-head">
+        <div class="employer-logo notched"><!-- Replace with <img src="images/club-logo.png"> --><span>🎓</span></div>
+        <div class="employer-heading">
+          <h3>YTU DOGDOK</h3>
+          <p class="employer-role">Student Organization</p>
+        </div>
+      </div>
+
+      <div class="sub-list roles-list">
+        <div class="sub-item">
+          <div class="sub-item-head">
+            <h4>Instructor</h4>
+            <span class="sub-item-meta">November 2024 — April 2025</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Instructed a Game Design 101 course for the first semester and a Game Design Workshop for the second semester.</li>
+          </ul>
+        </div>
+
+        <div class="sub-item">
+          <div class="sub-item-head">
+            <h4>Chairman of the Board</h4>
+            <span class="sub-item-meta">June 2023 — May 2024</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Directed a board of 9 and a team of 30 individuals to manage operations for a 750-member student club.</li>
+            <li>Spearheaded YTU Digital Gaming Days, a university gaming festival bridging players and creators through multiple gaming tournaments, interactive tech areas, and professional industry panels.</li>
+            <li>Hosted Global Game Jam '24 with 80 on-location jammers.</li>
+            <li>Executed 50+ community events, including industry studio tours, tournaments, and game nights.</li>
+            <li>Founded "Dev-Night," an all-night game development marathon, organizing five editions throughout the year.</li>
+            <li>Created the "Rolleri Tanıyalım" series, hosting five interviews with industry professionals to provide deep dives into their specific roles.
+              <ul class="role-bullets nested">
+                <li>Moderated an interview with Kemal Akay (Senior UI Scripter at EA Games) for the series.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAMS -->
+  <section id="jams" class="panel jams-panel">
+    <p class="eyebrow">Speedrun</p>
+    <h2 class="panel-title">Game Jams</h2>
+    <p class="panel-sub">Rapid prototypes made under time pressure.</p>
+
+    <div class="jam-grid">
+
+      <article class="jam-card" style="--tint:#2EC4B6;">
+        <div class="jam-cover"><span class="jam-cover-label">Cover Art / GIF</span></div>
+        <div class="jam-body">
+        <div class="jam-head">
+          <h3>Party Scan</h3>
+        </div>
+        <p class="jam-meta">Global Game Jam '26 · Team of 4</p>
+        <p class="jam-theme">Theme: Mask</p>
+        <p class="jam-desc">You have to search through cameras and find the imposter around the crowd in a masked party.</p>
+        <p class="sub-item-label">My Role</p>
+        <ul class="role-bullets">
+          <li>Designed the core gameplay loop.</li>
+          <li>Recorded and mixed every SFX on-site.</li>
+          <li>Made a menu and gameplay track.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Game Design</span>
+          <span class="tag">Sound Design</span>
+        </div>
+        </div>
+      </article>
+
+      <article class="jam-card" style="--tint:#FFC93C;">
+        <div class="jam-cover"><span class="jam-cover-label">Cover Art / GIF</span></div>
+        <div class="jam-body">
+        <div class="jam-head">
+          <h3>Eski Köye Yeni Kahve</h3>
+        </div>
+        <p class="jam-meta">GNG Jam '25 · Team of 3</p>
+        <p class="jam-theme">Theme: Old Dog, New Tricks*</p>
+        <p class="jam-desc">A cozy coffee shop simulation where you serve modern coffee to the old folk in a village.</p>
+        <p class="sub-item-label">My Role</p>
+        <ul class="role-bullets">
+          <li>Designed the gameplay mechanics and progression.</li>
+          <li>Wrote dialogues with multiple options.</li>
+          <li>Recorded and mixed every SFX on-site.</li>
+          <li>Made a menu and gameplay track.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Game Design</span>
+          <span class="tag">Narrative Design</span>
+          <span class="tag">Sound Design</span>
+        </div>
+        <p class="jam-footnote">* an idiom translated from Turkish.</p>
+        </div>
+      </article>
+
+      <article class="jam-card" style="--tint:#FF5D73;">
+        <div class="jam-cover"><span class="jam-cover-label">Cover Art / GIF</span></div>
+        <div class="jam-body">
+        <div class="jam-head">
+          <h3>Sacrifice Loop</h3>
+        </div>
+        <p class="jam-meta">Kramer Jam '25 · Team of 3</p>
+        <p class="jam-theme">Theme: You Don't Belong Here</p>
+        <p class="jam-desc">You have to use your time clones to get past the levels. But your clones must die before you leave.</p>
+        <p class="sub-item-label">My Role</p>
+        <ul class="role-bullets">
+          <li>Designed the core gameplay loop and levels with tutorial.</li>
+          <li>Recorded and mixed every SFX on-site.</li>
+          <li>Made a menu and gameplay track.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Game Design</span>
+          <span class="tag">Level Design</span>
+          <span class="tag">Sound Design</span>
+        </div>
+        </div>
+      </article>
+
+      <article class="jam-card" style="--tint:#7B61FF;">
+        <div class="jam-cover"><span class="jam-cover-label">Cover Art / GIF</span></div>
+        <div class="jam-body">
+        <div class="jam-head">
+          <h3>İskir</h3>
+        </div>
+        <p class="jam-meta">Yıldız Jam '24 · Team of 5</p>
+        <p class="jam-theme">Theme: Delay the Inevitable</p>
+        <p class="jam-desc">Fight monsters, gather materials, make potions, and increase your lifespan. Repeat before death catches you.</p>
+        <p class="sub-item-label">My Role</p>
+        <ul class="role-bullets">
+          <li>Designed the core gameplay loop and game economy.</li>
+          <li>Recorded and mixed every SFX on-site.</li>
+          <li>Made a menu and gameplay track.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Game Design</span>
+          <span class="tag">Economy Design</span>
+          <span class="tag">Sound Design</span>
+        </div>
+        </div>
+      </article>
+
+      <article class="jam-card" style="--tint:#2EC4B6;">
+        <div class="jam-cover"><span class="jam-cover-label">Cover Art / GIF</span></div>
+        <div class="jam-body">
+        <div class="jam-head">
+          <h3>Heist Prank</h3>
+        </div>
+        <p class="jam-meta">Global Game Jam '24 · Team of 4</p>
+        <p class="jam-theme">Theme: Make Me Laugh</p>
+        <p class="jam-desc">Rob a bank by simply making everybody laugh who might stop you! Avoid cameras, make pranks, and grab the cash to complete your heist.</p>
+        <p class="sub-item-label">My Role</p>
+        <ul class="role-bullets">
+          <li>Designed the gameplay mechanics and levels.</li>
+          <li>Recorded dad jokes with my voice.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Game Design</span>
+          <span class="tag">Voice Acting</span>
+        </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="panel projects-panel">
+    <p class="eyebrow">Library</p>
+    <h2 class="panel-title">Projects</h2>
+    <p class="panel-sub">Other work outside of studio credits and jams. Replace each cover and description below.</p>
+
+    <div class="project-grid">
+
+      <article class="project-card" style="--tint:#FF5D73;">
+        <div class="project-cover">
+          <span class="project-cover-label">Cover Art / GIF</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>Project Title One</h3>
+            <span class="project-year">2024</span>
+          </div>
+          <p class="project-role">Lead Designer · Unity</p>
+          <p class="project-desc">One or two sentences on what the game is and what you specifically designed on it.</p>
+          <div class="project-tags">
+            <span class="tag">Puzzle</span>
+            <span class="tag">Systems Design</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" style="--tint:#2EC4B6;">
+        <div class="project-cover">
+          <span class="project-cover-label">Cover Art / GIF</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>Project Title Two</h3>
+            <span class="project-year">2023</span>
+          </div>
+          <p class="project-role">Level Designer · Unreal Engine</p>
+          <p class="project-desc">One or two sentences on what the game is and what you specifically designed on it.</p>
+          <div class="project-tags">
+            <span class="tag">Platformer</span>
+            <span class="tag">Level Design</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="panel skills-panel">
+    <p class="eyebrow">Inventory</p>
+    <h2 class="panel-title">Skills</h2>
+
+    <div class="skills-groups">
+      <div class="skill-group">
+        <h3 class="skill-group-title">Design</h3>
+        <div class="pill-row">
+          <span class="pill">Systems Design</span>
+          <span class="pill">Level Design</span>
+          <span class="pill">Narrative Design</span>
+          <span class="pill">Economy Balancing</span>
+          <span class="pill">Playtesting</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Tools & Engines</h3>
+        <div class="pill-row">
+          <span class="pill">Unity</span>
+          <span class="pill">Unreal Engine</span>
+          <span class="pill">Godot</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Miro</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Technical</h3>
+        <div class="pill-row">
+          <span class="pill">C#</span>
+          <span class="pill">Visual Scripting</span>
+          <span class="pill">Git</span>
+          <span class="pill">Excel / Sheets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="panel education-panel">
+    <p class="eyebrow">Character Sheet</p>
+    <h2 class="panel-title">Education</h2>
+
+    <div class="edu-grid">
+      <div class="edu-card" style="--tint:#7B61FF;">
+        <h3>Mechatronical Engineering</h3>
+        <p class="edu-school">Yıldız Technical University</p>
+        <p class="edu-date">2021 — 2026</p>
+        <p class="edu-detail">100% English · GPA: 3.03</p>
+      </div>
+      <div class="edu-card" style="--tint:#FF5D73;">
+        <h3>English Preparatory Program</h3>
+        <p class="edu-school">Yıldız Technical University</p>
+        <p class="edu-date">2020 — 2021</p>
+        <p class="edu-detail">GPA: 4.00</p>
+      </div>
+    </div>
+
+    <div class="skill-group languages-block">
+      <h3 class="skill-group-title">Languages</h3>
+      <div class="pill-row">
+        <span class="pill">Turkish — Native</span>
+        <span class="pill">English — Fluent</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>I'm open for on-site or remote positions — feel free to reach out! ✉ 💬 in CV, all in the sidebar.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
