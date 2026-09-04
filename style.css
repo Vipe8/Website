@@ -616,7 +616,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
    =========================================================== */
 .jam-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -631,14 +631,21 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 }
 .jam-card:hover { transform: translateY(-4px); box-shadow: 6px 6px 0 var(--tint); }
 
-.jam-cover {
+.jam-cover-gallery {
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--tint) 70%, white), var(--tint));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
-.jam-cover-label {
+.jam-cover-gallery .slide-track {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+.jam-cover-gallery .slide {
+  aspect-ratio: auto;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--tint) 70%, white), var(--tint));
+}
+.jam-cover-gallery .slide span {
   font-family: var(--font-mono);
   font-size: 11px;
   color: rgba(0,0,0,0.5);
@@ -646,6 +653,8 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   padding: 4px 10px;
   border-radius: 6px;
 }
+.jam-cover-gallery .slide-nav { z-index: 1; }
+.jam-cover-gallery .slide-dots { position: absolute; left: 0; right: 0; bottom: 8px; margin-top: 0; }
 
 .jam-body { padding: 18px 20px 22px; }
 

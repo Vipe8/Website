@@ -156,4 +156,27 @@ document.querySelectorAll('.slide-gallery').forEach(gallery => {
   if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: track.clientWidth, behavior: 'smooth' }));
 
   setActiveDot();
+
+  if (gallery.classList.contains('jam-cover-gallery') && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let autoplayTimer;
+    const advanceSlide = () => {
+      const isLastSlide = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+      track.scrollTo({ left: isLastSlide ? 0 : track.scrollLeft + track.clientWidth, behavior: 'smooth' });
+    };
+    const startAutoplay = () => {
+      if (!autoplayTimer) autoplayTimer = setInterval(advanceSlide, 4500);
+    };
+    const pauseAutoplay = () => {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    };
+
+    gallery.addEventListener('mouseenter', pauseAutoplay);
+    gallery.addEventListener('mouseleave', startAutoplay);
+    gallery.addEventListener('focusin', pauseAutoplay);
+    gallery.addEventListener('focusout', (event) => {
+      if (!gallery.contains(event.relatedTarget)) startAutoplay();
+    });
+    startAutoplay();
+  }
 });
