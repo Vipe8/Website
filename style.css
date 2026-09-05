@@ -67,7 +67,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 28px 24px;
+  padding: 20px 28px 16px;
   overflow-y: auto;
   z-index: 20;
 }
@@ -121,18 +121,19 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 }
 
 .player-name {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .player-class {
-  margin: 4px 0 16px;
+  margin: 2px 0 8px;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: #38F970;
 }
 
 .sidebar-logo {
@@ -175,14 +176,14 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 /* ===========================================================
    LEVEL-SELECT NAV — collapsible groups
    =========================================================== */
-.level-select { margin: 12px 0 40px; }
+.level-select { margin: 4px 0 16px; }
 
-.nav-flat { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.nav-flat { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
 .nav-flat .nav-link {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 15px;
-  padding: 11px 14px;
+  font-size: 14px;
+  padding: 7px 10px;
 }
 .nav-flat .nav-link .nav-cursor { font-size: 11px; }
 
@@ -259,6 +260,14 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 /* ===========================================================
    SIDEBAR FOOTER
    =========================================================== */
+.main-contact-note {
+  margin: -41px 0 -0px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #38F970;
+}
+
 .controller-row { display: flex; gap: 8px; justify-content: center; margin-bottom: 14px; }
 
 .pad-btn {
@@ -476,6 +485,8 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 .club-block .club-art {
   width: min(198px, 100%);
   height: auto;
+  background: transparent;
+  border: 0;
   aspect-ratio: 3 / 5;
   grid-column: 2;
   grid-row: 1 / span 2;
@@ -494,6 +505,9 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   align-items: center;
 }
 .club-block .roles-list .sub-item {
+  grid-column: 1;
+}
+.club-block .club-links {
   grid-column: 1;
 }
 .club-block .role-bullets {
@@ -618,6 +632,15 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 }
 .link-chip:hover { background: var(--tint); color: #fff; }
 
+.studio-block .link-chip {
+  border-color: #38F970;
+  color: #38F970;
+}
+.studio-block .link-chip:hover {
+  background: #38F970;
+  color: #031509;
+}
+
 /* ===========================================================
    PROJECT DETAIL — text + media split (Experience projects)
    =========================================================== */
@@ -650,6 +673,14 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.slide img,
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .slide span {
   font-family: var(--font-mono);

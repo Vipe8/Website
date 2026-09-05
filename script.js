@@ -153,7 +153,10 @@ document.querySelectorAll('.slide-gallery').forEach(gallery => {
   });
 
   if (prevBtn) prevBtn.addEventListener('click', () => track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' }));
-  if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: track.clientWidth, behavior: 'smooth' }));
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    const isLastSlide = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    track.scrollTo({ left: isLastSlide ? 0 : track.scrollLeft + track.clientWidth, behavior: 'smooth' });
+  });
 
   setActiveDot();
 
