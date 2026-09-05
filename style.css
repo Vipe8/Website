@@ -69,8 +69,10 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   justify-content: space-between;
   padding: 20px 28px 16px;
   overflow-y: auto;
+  scrollbar-width: none;
   z-index: 20;
 }
+.sidebar::-webkit-scrollbar { display: none; }
 
 .content {
   margin-left: var(--sidebar-w);
