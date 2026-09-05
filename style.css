@@ -135,6 +135,15 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   color: var(--coral);
 }
 
+.sidebar-logo {
+  display: block;
+  width: min(170px, 100%);
+  height: auto;
+  aspect-ratio: 1.14;
+  object-fit: contain;
+  margin: 0 auto 6px;
+}
+
 .stat-line {
   display: flex;
   align-items: center;
@@ -166,7 +175,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 /* ===========================================================
    LEVEL-SELECT NAV — collapsible groups
    =========================================================== */
-.level-select { margin: 40px 0; }
+.level-select { margin: 12px 0 40px; }
 
 .nav-flat { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
 .nav-flat .nav-link {
@@ -517,6 +526,17 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 .employer-role { margin: 0 0 4px; font-weight: 600; color: var(--tint); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
 .employer-meta { margin: 0; font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); }
 
+.studio-logo {
+  width: min(160px, 100%);
+  height: auto;
+  aspect-ratio: 2.04;
+  object-fit: contain;
+  object-position: center;
+  margin-left: 80px;
+}
+
+.studio-block .employer-head { margin-bottom: 4px; }
+
 .sub-list {
   display: flex;
   flex-direction: column;
@@ -697,6 +717,12 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.jam-card:nth-child(4),
+.jam-card:nth-child(5) {
+  position: relative;
+  left: calc((100% + 18px) / 2);
 }
 
 .jam-card {
@@ -930,6 +956,8 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   .about-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
   .jam-grid { grid-template-columns: repeat(2, 1fr); }
+  .jam-card:nth-child(4),
+  .jam-card:nth-child(5) { left: auto; }
   .pixel-grid { grid-template-columns: repeat(2, 1fr); }
   .fav-grid { grid-template-columns: repeat(3, 1fr); }
   .project-detail-grid { grid-template-columns: 1fr; }
@@ -951,6 +979,8 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   .panel-title { font-size: 30px; }
 
   .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+  .studio-block .employer-head { flex-wrap: wrap; }
+  .studio-logo { margin-left: 0; }
   .jam-grid { grid-template-columns: 1fr; }
   .pixel-grid { grid-template-columns: repeat(2, 1fr); }
   .fav-grid { grid-template-columns: repeat(2, 1fr); }
