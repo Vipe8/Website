@@ -1000,6 +1000,8 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   .pixel-grid { grid-template-columns: repeat(2, 1fr); }
   .fav-grid { grid-template-columns: repeat(3, 1fr); }
   .project-detail-grid { grid-template-columns: 1fr; }
+  .studio-block .project-detail-text { order: 1; }
+  .studio-block .project-detail-media { order: 2; }
 }
 
 @media (max-width: 1200px) and (min-width: 721px) {
